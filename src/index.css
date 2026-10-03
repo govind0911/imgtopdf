@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+:root{--bg:#F8FAFC;--surface:#fff;--line:#E2E8F0;--ink:#0F172A;--head:#1E3A8A;--muted:#64748B;--brand:#2563EB;--brand-hover:#1D4ED8;--soft:#EFF6FF;--danger:#DC2626;--ok:#16A34A}
+.dark{--bg:#0F172A;--surface:#1E293B;--line:#334155;--ink:#F8FAFC;--head:#F8FAFC;--muted:#94A3B8;--brand:#3B82F6;--brand-hover:#2563EB;--soft:rgb(59 130 246/.12);--danger:#EF4444;--ok:#4ADE80}
+@theme inline{--font-sans:"Inter Variable",ui-sans-serif,system-ui,sans-serif;--color-bg:var(--bg);--color-surface:var(--surface);--color-line:var(--line);--color-ink:var(--ink);--color-head:var(--head);--color-muted:var(--muted);--color-brand:var(--brand);--color-brand-hover:var(--brand-hover);--color-soft:var(--soft);--color-danger:var(--danger);--color-ok:var(--ok);--shadow-card:0 8px 30px rgb(15 23 42/.06)}
+body{background-color:var(--bg);color:var(--ink);background-image:radial-gradient(60rem 28rem at 50% -8%,rgb(37 99 235/.07),transparent),radial-gradient(40rem 20rem at 95% 105%,rgb(239 68 68/.04),transparent);background-attachment:fixed;transition:background-color .2s,color .2s}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}
